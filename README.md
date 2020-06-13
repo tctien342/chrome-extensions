@@ -11,6 +11,7 @@
 
 ## Step 2: Development
 
+-   Follow all TODO in sources
 -   Run `npm run watch` at root folder then add folder `dist` to extension
 
 ## Step 3: Production
