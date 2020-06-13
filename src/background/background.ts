@@ -38,11 +38,11 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 /**
  * On receive message from popup or contentJS
  */
-chrome.runtime.onMessage.addListener((message: { from: string; action: string; data?: any }, sender, response) => {
-    if (['content', 'popup'].indexOf(message.from) !== -1) {
+chrome.runtime.onMessage.addListener((event: { from: string; action: string; data?: any }, sender, response) => {
+    if (['content', 'popup'].indexOf(event.from) !== -1) {
         // Incoming message to handle
-        console.log('<i> Incoming message from:', message.from);
-        switch (message.action) {
+        console.log('<i> Incoming message from:', event.from, '- action:', event.action);
+        switch (event.action) {
             // TODO: Do something with request from popup or contentJS injected to website
             default:
                 response(true);

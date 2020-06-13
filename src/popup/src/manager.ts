@@ -16,6 +16,7 @@ export function sendEventToBackground(event: { action: string; data?: any }): Pr
 					data: event?.data,
 				},
 				(res: any) => {
+					// Response from background
 					rs(res);
 				},
 			);
