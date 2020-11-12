@@ -5,7 +5,7 @@ const { join } = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 let prodPlugins = [];
 if (process.env.NODE_ENV === 'production') {
-    prodPlugins.push(new optimize.AggressiveMergingPlugin(), new optimize.OccurrenceOrderPlugin(), new CopyWebpackPlugin({
+    prodPlugins.push(new optimize.AggressiveMergingPlugin(), new CopyWebpackPlugin({
         patterns: [{ from: './manifest.json' }, { from: './src/assets' },
         {
             from: './src/popup/build', to: "./popup", globOptions: {
