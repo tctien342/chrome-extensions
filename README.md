@@ -1,6 +1,5 @@
-# api-notifications
-An app that built with Tauri for learning Rust
+# Chrome Extension Template
+> Build with react 18 and TailwindCSS
 
 # Tech included
-+ Tauri for cross-platform compiler
-+ React + Eslint + Typescript + SCSS
++ React + Eslint + Typescript + TailwindCSS + SCSS
