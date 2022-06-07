@@ -1,14 +1,42 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "sourceMap": false,
-        "types": ["@types/chrome", "node"],
-        "typeRoots": ["node_modules/@types"],
-        "moduleResolution": "node",
-        "lib": ["es2017", "dom"]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@env": ["./env.ts"],
+      "@assets/*": ["./src/assets/*"],
+      "@apis/*": ["./src/apis/*"],
+      "@components/*": ["./src/components/*"],
+      "@configs/*": ["./src/configs/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@public/*": ["./public/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@types/*": ["./src/types/*"],
+      "@recoil/*": ["./src/states/atoms/*"]
     },
-    "include": ["src/background", "src/background/contentscript"],
-    "exclude": ["src/background/prototype.ts"]
+    "types": ["@types/chrome"],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  },
+  "include": ["src"]
 }
