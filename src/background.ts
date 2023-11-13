@@ -1,3 +1,5 @@
+/// <reference types="chrome"/>
+
 import '@utils/prototype';
 
 /**

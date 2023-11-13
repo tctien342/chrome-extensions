@@ -12,7 +12,14 @@ module.exports = {
     'react-css-module-hints',
     'import',
   ],
-  ignorePatterns: ['.eslintrc.js', 'tailwind.config.js'],
+  ignorePatterns: [
+    '.eslintrc.js',
+    'tailwind.config.js',
+    'jest.setup.js',
+    'jest.config.js',
+    'postcss.config.js',
+    'webpack.js',
+  ],
   extends: [
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react-hooks/recommended',
@@ -42,6 +49,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 'warn',
     'react/jsx-closing-bracket-location': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/require-await': 'warn',
     '@typescript-eslint/comma-dangle': 'off',
     'react/jsx-props-no-spreading': 'off',

@@ -1,5 +1,7 @@
 import './content.scss';
 
+console.log('This is suck BTW!');
+
 /**
  * Receive message from background or popup
  * @param event Message from background or popup script
